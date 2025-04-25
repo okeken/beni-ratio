@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Section</title>
+
+</head>
+<body>
+
+
+     <section class="testimonial-section bg-green-950">
+
+        <dialog class="video-modal">
+            <form method="dialog">
+              <button class="video-modal-close" aria-label="Close modal">&times;</button> 
+            </form>
+            <video controls width="720">
+              <source src="" type="video/mp4">
+            </video>
+          </dialog>
+
+        <div class="testimonial-container">
+            <div class="testimonial-label bg-green-800 text-purple-300">TESTIMONIALS</div>
+          <div class="flex justify-between items-center testimonial-heading-wrapper">
+          <div >
+            <h2 class="testimonial-heading">Hear What Our Clients Have to Say!</h2>
+          </div>
+            <div class="flex desktop-controls">
+             <div class="arrow-wrapper flex  ">               
+
+                    <button class="arrow-btn prev-btn" aria-label="Previous slide">
+                        <svg viewBox="0 0 24 24" fill="white">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    <button class="arrow-btn next-btn" aria-label="Next slide">
+                        <svg viewBox="0 0 24 24" fill="white">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>            
+             </div>
+            </div>
+          </div>
+          
+            
+            <div class="testimonial-slider">
+                
+                <div class="testimonial-wrapper">
+                    <div class="testimonial-track">    
+                   </div>
+                </div>                
+               
+                <div class="slider-controls mobile-controls">
+                    <div class="slider-dots">                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="services">
+
+       <div class="heading-block">
+        <div class="sub-title">Services</div>
+        <div class="heading-one">Precision in Numbers,</div>
+        <div class="heading-two"> Passion in Service.</div>
+        <div class="heading-details"> 
+            Take the stress out of tax, compliance, and financial planning with a personalised <br /> service designed to free up your time and help your business grow.
+        </div>
+       </div>
+
+        <div class="grid">
+            <div class="service">
+             
+              <div class="bg-purple-100 icon-container">
+                <img class="service-icon" src="./company-account.svg" />
+              </div>
+
+              <div class="details text-grey-900">
+                    Tax Returns For Business Owners
+
+              </div>
+            </div>    
+            <div class="service">
+             
+                <div class="bg-purple-100 icon-container">
+                  <img class="service-icon" src="./company-account.svg" />
+                </div>
+  
+                <div class="details text-grey-900">
+                      Tax Returns For Business Owners
+  
+                </div>
+              </div>    
+              <div class="service">
+             
+                <div class="bg-purple-100 icon-container">
+                  <img class="service-icon" src="./company-account.svg" />
+                </div>
+  
+                <div class="details text-grey-900">
+                      Tax Returns For Business Owners
+  
+                </div>
+              </div>       
+              
+                 
+                
+        </div>
+        
+    </section>
+
+    
+
+<style>
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+  /* Define variables */
+  /* green */
+  --green-500:#006466;
+  --green-700:#005052;
+  --green-800:#004142;
+  --green-950: #001E1F ;
+ 
+  /* purple */
+  --purple-50:#FAF0FA;
+  --purplee-100:#F6E4F6;
+  --purple-300:#DD97DD; /* Used for text-purple-300 */
+  --purple-400:#C752C7; /* Used for next-btn background */
+
+  /* grey */
+  --grey-50:#F4F4F4;
+  --grey-800:#1A1A1A; 
+  --grey-900:#0D0D0D;
+  --grey-950:#080808;
+
+  --font-weight-regular:400;
+  --font-weight-medium:500;
+
+  --font-size-h3:32px;
+  --font-height-sm:20px;
+  --font-height-2xl:40px;
+
+
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+} 
+
+section{
+    padding: 3rem;
+  
+}
+
+
+@media (max-width: 767px) {
+  section{
+    padding: 1rem;
+  }
+}
+
+
+.flex {
+    display: flex;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+
+.bg-purple-100 {
+    background-color: var(--purplee-100);
+}
+
+/* Unused .text-purple-50, .bg-purple-50 removed */
+
+.text-purple-300 {
+    color:var(--purple-300)
+}
+
+
+/* Unused .bg-purple-300 removed */
+
+/* Unused .text-green-500 removed */
+
+.bg-green-500{ /* Used for arrow-btn */
+    background-color: var(--green-500);
+}
+
+.text-green-700{
+    color:var(--green-700); /* Used for quote-mark */
+}
+
+/* Unused .bg-green-700 removed */
+
+/* Unused .text-green-800 removed */
+
+.bg-green-800 { /* Used for testimonial-label */
+   background-color: var(--green-800);
+}
+
+/* Unused .text-green-950 removed */
+
+.bg-green-950 { /* Used for testimonial-section */
+    background-color:var(--green-950)
+ }
+
+
+.text-grey-800 { /* Used for testimonial-name */
+    color:var(--grey-800);
+}
+
+/* Unused .bg-grey-800 removed */
+
+.text-grey-900 { /* Used for h3 */
+    color:var(--grey-900);
+}
+
+/* Unused .bg-grey-900 removed */
+
+/* Unused .sm-radius removed */
+
+
+
+
+/* Service Section */
+.services {
+     .heading-block {
+        text-align: center;
+     }
+     
+     .heading-one, .heading-two {
+       font-weight: 600;
+       color:var(--grey-950);
+       font-size: var(--font-size-h3);
+  line-height: var(--font-height-2xl);
+  letter-spacing: -0.04em;
+     }
+
+     .heading-two  {
+        font-weight: 300;
+        font-style: italic;
+        margin-bottom: 2rem;
+        
+     }
+    .sub-title {
+        color: #C762C7;
+        font-weight: 600;
+        text-transform: uppercase;     
+        padding: 0.4rem;
+        border-radius: 0.5rem;
+        display: inline-block;    
+  background:var(--purplee-100);
+
+  margin-bottom:3rem;
+
+    }
+
+    .heading-details {
+        font-weight: var(--font-weight-medium);
+        color: var(--grey-800);   
+        font-size: 1rem;  
+        line-height: var(--font-height-sm);
+        margin-bottom: 2rem;
+    }
+
+    .service {
+        border-radius: 16px;
+        background-color: var(--grey-50);
+      
+        padding: 1rem;
+    }
+
+
+    .service:nth-child(2){
+        /* border:2px solid blue; */
+        transform: rotate(-2deg);
+    }
+
+
+    .service-icon {
+
+        margin-bottom: -0.3rem;
+    }
+
+  .icon-container {
+ 
+ display: inline-block;
+ padding: 0.8rem;
+ border-radius: 1rem;
+ margin-bottom: 2rem;
+
+}
+
+.details {
+    font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+}
+
+
+/* Testimonial Section */
+.testimonial-section {
+    width: 100%;
+    padding: 40px 20px;
+   
+    color: white;
+}
+
+.testimonial-container {
+      margin: 0 auto;
+    position: relative;
+}
+
+
+.testimonial-label {
+    font-family: 'BodyFont', sans-serif; 
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px; 
+    margin-bottom: 15px;
+    font-weight: 500; 
+    font-size: 0.75rem; 
+    line-height: 1rem;
+    letter-spacing: 0.04em;
+}
+
+.testimonial-heading-wrapper {
+    margin-bottom: 2rem;
+}
+
+.testimonial-heading {
+  font-family: 'DisplayFont', sans-serif; /* Replace with actual font name */
+  font-weight: 400;
+  font-size: 1.75rem; 
+  line-height: 2.25rem;
+  letter-spacing: -0.04em; 
+}
+
+/* Unused .mobile-heading removed */
+
+/* Slider Controls */
+.slider-controls {
+    z-index: 10;
+}
+
+.mobile-controls {
+    display: none;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.arrow-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: rgba(255, 105, 180, 0.9);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    background-color: var(--green-500);
+}
+
+.next-btn {
+    margin-right:0.5rem;
+    background-color: var(--purple-400);
+}
+
+.next-btn {
+    margin-left: 0.5rem;
+}
+
+/* Unused .arrow-icon removed */
+
+.arrow-btn:hover {
+    transform: scale(1.1);
+}
+
+.arrow-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.slider-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #ff69b4; /* Pink color for active dot */
+}
+
+.dot:not(.active) {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Testimonial Slider */
+.testimonial-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-wrapper {
+    overflow: hidden;
+}
+
+.testimonial-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    flex: 0 0 100%;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    height: 18rem;
+}
+
+.testimonial-image {
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem;
+   
+}
+
+.testimonial-image img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+.play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-icon {
+    backdrop-filter: blur(4px);
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quote-mark {
+  color: var(--green-700);
+  position: relative;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;;
+}
+
+.quote-mark::before {
+  content: "“";
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Unused .testimonial-title rule removed (using .text-grey-900 now) */
+
+
+.testimonial-name {
+    margin-bottom: 5px;
+  font-weight: 500;  /* Medium weight (500) */
+  font-size: 1rem;
+  line-height: 1.5; 
+  letter-spacing: 0%; 
+  color:var(--grey-800)
+}
+
+.testimonial-position {
+  font-weight: 600;                      /* Semibold */
+  font-size: 12px;                  
+  line-height: 1rem;                  
+  letter-spacing: 0%;
+  color:var(--green-500) /* Used for testimonial-position */
+}
+
+
+/* Desktop Specific Styles */
+@media (min-width: 768px) {
+    
+      
+    .testimonial-track {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+    
+    .testimonial-card {
+        flex: 0 0 calc(50% - 20px);
+        flex-direction: row; 
+        margin-right: 20px;
+    }
+    
+    .testimonial-image {
+        flex: 0 0 40%;
+    }
+    
+    .testimonial-content {
+        flex: 0 0 60%;
+        padding: 20px;
+    }    
+ 
+    
+    .desktop-controls {
+        display: flex;
+    }
+    
+    .mobile-controls {
+        display: none;
+    }
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 767px) {
+
+     
+    .desktop-controls {
+        display: none;
+    }
+    
+    .mobile-controls {
+        display: flex;
+        margin-top: 20px;
+    }
+    
+    .testimonial-card {
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+    
+    .testimonial-image {
+        flex: 0 0 45%;
+    }
+    
+    .testimonial-content {
+        flex: 0 0 55%;
+        padding: 20px;
+    }    
+ 
+    .text-grey-900 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    
+ 
+}
+
+
+/* Video Modal Styling */
+.video-modal {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    max-width: 800px; 
+    width: 90%;
+    overflow: hidden; 
+    background-color: #000; /* Background for the modal itself */
+    position: relative; 
+    margin: auto;
+    opacity: 0; 
+    transform: scale(0.95); 
+    /* Transition for closing */
+    transition: display 0s allow-discrete 0.3s, 
+                overlay 0s allow-discrete 0.3s,
+                opacity 0.3s ease, 
+                transform 0.3s ease;
+}
+
+.video-modal[open] {
+    opacity: 1;
+    transform: scale(1);
+    /* Transition for opening */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Starting style for opening animation */
+@starting-style {
+  .video-modal[open] {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  .video-modal[open]::backdrop {
+     opacity: 0;
+  }
+}
+
+
+/* Style the backdrop and use flex to center the modal */
+.video-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.7); /* Translucent black */
+    opacity: 0;   
+    /* Transition for closing */
+    transition: opacity 0.3s ease, display 0s allow-discrete 0.3s, overlay 0s allow-discrete 0.3s; 
+}
+
+.video-modal[open]::backdrop {
+    opacity: 1;
+    /* Transition for opening */
+    transition: opacity 0.3s ease; 
+}
+
+/* Style the close button */
+.video-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    line-height: 30px; /* Center the '×' */
+    text-align: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.2s ease;
+}
+
+.video-modal-close:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Ensure video fills the modal */
+.video-modal video {
+    display: block; /*Remove extra space below video */
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Match modal border-radius if needed, but overflow:hidden on modal is better */
+}
+
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const playSpeed = 8000;
+    const testimonials = [
+      {
+        title: "Straight Talking Finance: Live Sessions with Benedicta",
+        status: "Over Subscribed",
+        name: "Sarah Williams",
+        position: "Founder, Creative Hub",
+        image: "https://i.pravatar.cc/250?img=1",
+        link: "#",
+        videoUrl: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" // Added video URL
+      },
+      {
+        title: "Level Up: Investing Masterclass with Aisha",
+        status: "Fully Booked",
+        name: "Kwame Adom",
+        position: "Investment Analyst, Adom Capital",
+        image: "https://i.pravatar.cc/250?img=2",
+        link: "#",
+        videoUrl: "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" // Added different video URL
+      },
+      {
+        title: "Money Moves: Women & Wealth Workshop",
+        status: "Limited Slots Left",
+        name: "Tola Ogunleye",
+        position: "Founder, FinSavvy Africa",
+        image: "https://i.pravatar.cc/250?img=3",
+        link: "#",
+        videoUrl: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" // Added different video URL
+      },
+      {
+        title: "Young & Thriving: Finance for Gen Z",
+        status: "Open",
+        name: "Jide Okonkwo",
+        position: "CTO, Yute Finance",
+        image: "https://i.pravatar.cc/250?img=4",
+        link: "#",
+        videoUrl: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" // Added different video URL
+      },
+      {
+        title: "From Debt to Wealth: Practical Roadmap Session",
+        status: "Almost Full",
+        name: "Adaeze Nwankwo",
+        position: "CFO, BrightPath Ventures",
+        image: "https://i.pravatar.cc/250?img=5",
+        link: "#",
+        videoUrl: "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" // Added different video URL
+      }
+    ];
+
+    // Get elements
+    const track = document.querySelector('.testimonial-track');
+    const dotsContainer = document.querySelector('.slider-dots');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const sliderElement = document.querySelector('.testimonial-slider'); // Get slider container
+
+    // Clear existing static content
+    track.innerHTML = '';
+    dotsContainer.innerHTML = '';
+
+    // Generate testimonial cards and dots
+    testimonials.forEach((testimonial, index) => {
+        // Create Card
+        const card = document.createElement('div');
+        card.classList.add('testimonial-card');
+        if (index === 0) {
+            card.classList.add('testimonial-card-first');
+        }
+        // Add data-video-url attribute here
+        card.innerHTML = `
+            <div class="testimonial-image play-video" data-video-url="${testimonial.videoUrl}">
+                <img src="${testimonial.image}" alt="${testimonial.name}">
+                <div class="play-button">
+                    <img class="play-icon" src="./play.svg" />
+                </div>
+            </div>
+            <div class="testimonial-content">
+                <div>
+                    <div class="quote-mark text-green-700"></div>
+                    <h3 class="text-grey-900">${testimonial.title}</h3>
+                </div>
+                <div>
+                    <p class="testimonial-name">${testimonial.name}</p>
+                    <p class="testimonial-position">${testimonial.position}</p>
+                </div>
+            </div>
+        `;
+        track.appendChild(card);
+
+        // Create Dot
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (index === 0) {
+            dot.classList.add('active');
+        }
+        dot.setAttribute('data-index', index);
+        dotsContainer.appendChild(dot);
+    });
+
+    // Re-select dynamically generated elements   
+    const originalCardCount = testimonials.length; // Use data length
+    const dots = document.querySelectorAll('.dot'); // Re-select dots
+
+    // Clone the first card (which was dynamically generated) for seamless looping
+    const firstCard = document.querySelector('.testimonial-card-first');
+    if (firstCard) {
+        const firstCardClone = firstCard.cloneNode(true);
+        track.appendChild(firstCardClone);
+    }
+
+    // Set initial state
+    let currentIndex = 0;
+    let isMobile = window.innerWidth < 768;
+    
+    // Update slider based on screen size
+    function updateSlider() {
+        isMobile = window.innerWidth < 768;
+        
+        if (isMobile) {
+            // Mobile view - show one card at a time, accounting for margin
+            track.style.display = 'flex';
+            const cardElement = track.querySelector('.testimonial-card');
+            if (cardElement) {
+                const cardStyle = window.getComputedStyle(cardElement);
+                const marginRight = parseFloat(cardStyle.marginRight);
+                // Use scrollWidth of the card itself for accurate width calculation
+                const cardWidth = cardElement.scrollWidth;
+                const slideDistance = cardWidth + marginRight;
+                track.style.transform = `translateX(-${currentIndex * slideDistance}px)`;
+            } else {
+                 // Fallback if cardElement is not found
+                 track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        } else {
+            // Desktop view - show cards in a row with horizontal scrolling
+            track.style.display = 'flex';
+            // Desktop view - show cards in a row with horizontal scrolling
+            track.style.display = 'flex';
+            const cardElement = track.querySelector('.testimonial-card');
+            if (cardElement) {
+                const cardStyle = window.getComputedStyle(cardElement);
+                const marginRight = parseFloat(cardStyle.marginRight);
+                const cardWidth = cardElement.offsetWidth;
+                const slideDistance = cardWidth + marginRight;
+                track.style.transform = `translateX(-${currentIndex * slideDistance}px)`;
+            } else {
+                 // Fallback or default behavior if cardElement is not found
+                 const cardWidthPercentage = 50; // Assuming 2 cards visible
+                 track.style.transform = `translateX(-${currentIndex * cardWidthPercentage}%)`;
+            }
+        }
+    }
+    
+    // Update active dot
+    function updateActiveDot() {
+        dots.forEach(d => d.classList.remove('active'));
+        // Highlight the first dot if we are on the cloned slide
+        const dotIndex = currentIndex % originalCardCount;
+        dots[dotIndex].classList.add('active');
+    }
+    
+    // Initialize slider
+    updateSlider();
+    
+    // Handle navigation buttons
+    prevBtn.addEventListener('click', function() {
+        clearInterval(autoPlayInterval); // Clear interval on manual navigation
+        if (isMobile) {
+             if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                // Handle seamless loop for mobile (needs adjustment if using clone method for prev)
+                 // For now, just loop to the last original card index
+                 currentIndex = originalCardCount - 1;
+            }
+        } else { // Desktop
+             if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = originalCardCount - 2; // Loop to the index showing last two cards
+            }
+        }
+        track.style.transition = 'transform 0.5s ease';
+        updateSlider();
+        updateActiveDot();
+    });
+
+    nextBtn.addEventListener('click', function() {
+        clearInterval(autoPlayInterval); // Clear interval on manual navigation
+        if (isMobile) {
+            // Simply increment index, the transitionend listener will handle the loop
+            currentIndex++;
+        } else { // Desktop
+             // Use modulo for cleaner looping: 0, 1, 2, 3, 0
+            currentIndex = (currentIndex + 1) % (originalCardCount - 1);
+        }
+        track.style.transition = 'transform 0.5s ease'; // Ensure transition is enabled
+        updateSlider();
+        updateActiveDot();
+    });
+    
+    // Handle dot clicks
+    dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+            clearInterval(autoPlayInterval); // Clear interval on manual navigation
+            const index = parseInt(this.getAttribute('data-index'));
+            currentIndex = index;
+            updateSlider();
+            updateActiveDot();
+        });
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', updateSlider);
+    
+    // Auto-play functionality
+    function autoPlay() {
+         if (isMobile) {
+            // Simply increment index, the transitionend listener will handle the loop
+            currentIndex++;
+         } else { // Desktop
+             // Use modulo for cleaner looping: 0, 1, 2, 3, 0
+            currentIndex = (currentIndex + 1) % (originalCardCount - 1);
+         }
+        track.style.transition = 'transform 0.5s ease'; // Ensure transition is enabled
+        updateSlider();
+        updateActiveDot();
+    }
+
+    // Add transitionend listener for seamless looping (MOBILE ONLY)
+    track.addEventListener('transitionend', () => {
+        if (isMobile && currentIndex === originalCardCount) {
+            // Reached the clone, jump back to the start without animation
+            track.style.transition = 'none'; // Disable transition
+            currentIndex = 0;
+            updateSlider(); // Apply transform for the actual first slide
+            updateActiveDot();
+
+            // Re-enable transition after a tiny delay
+            // Use setTimeout to ensure the transform is applied before re-enabling transition
+            setTimeout(() => {
+                track.style.transition = 'transform 0.5s ease';
+            }, 50); // Small delay
+        }
+    });
+    
+    // Enable auto-play
+    let autoPlayInterval = setInterval(autoPlay, playSpeed);
+    
+    // Pause auto-play when hovering over the slider area
+    if (sliderElement) { 
+        sliderElement.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayInterval);
+        });
+
+        sliderElement.addEventListener('mouseleave', () => {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = setInterval(autoPlay,playSpeed); 
+        });
+    }
+
+    // --- Video Modal Logic ---
+    const modal = document.querySelector('.video-modal');
+    const video = modal.querySelector('video');
+    const videoSource = video.querySelector('source'); 
+    const playVideoButtons = document.querySelectorAll('.play-video');
+    const closeModalButton = modal.querySelector('.video-modal-close');
+
+    playVideoButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const videoUrl = this.dataset.videoUrl; 
+            if (videoUrl) {
+                videoSource.setAttribute('src', videoUrl); 
+                video.load();            
+                modal.showModal();
+                video.play(); 
+            } else {
+                console.error("Video URL not found for this testimonial.");
+            }
+        });
+    });
+ 
+    modal.addEventListener('close', function onClose() {
+        video.pause(); 
+    });
+
+
+}); 
+
+
+</script>
+
+</body>
+</html>
