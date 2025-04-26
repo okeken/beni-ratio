@@ -8,6 +8,38 @@
 </head>
 <body>
 
+    <button class="glow-button">Click Me</button>
+    <button class="neon-button">
+        Work with us →
+      </button>
+     <section class="hero">
+        <video autoplay muted loop playsinline class="background-video">
+            <source src="https://s3-figma-videos-production-sig.figma.com/video/TEAM/1224568564575743613/98de1d0bb54733b6d852758bcab591938e301142?Expires=1746403200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=aj1CmUyPhHcAwga1v7n8RfvpKc5~4enzJqJnOKVzzbFfyzPKPWvgM-wwn9CPiuTrdBeKA4EDYbaQwIVpOy6piQ0fUAGfPL6w1UqV3gFkfRBdfJoP-DJM~PDsCaf0s09ovkXvp0-CODeLHaxbFrtC1pRxj8R-mldX4DgB7HbM-vtinETFyXdVP94B~8~eYaqtPl~Kf~h2NzDd0ui7Ge3Y53Ve~XeK62b5Ul5Dky1pAGE8y~yt9V6ke0OaT12hugipyAYw4V46jMb~gEJLH8GJtm6camzXTtGNWU5swW6FYvkJQmtCnaJPMoUXAFByaB3NmT6I~-3PQPNV8bWu67pfpA__" type="video/mp4">
+        
+          </video>
+
+    <div class="hero-wrapper">
+        <div class="hero-content">
+            <div class=" intro">Over 1k+ businesses SERVed across the UK</div>
+            <h1>Accountant — Saving You Thousands in <span class="taxes bg-purple-500">Taxes.</span></h1>
+            <p class="desc">At BeniRatio Finances, we pride ourselves on simplifying the complexities of the UK tax system, ensuring our clients remain compliant with legal requirements while maximizing their financial potential.</p>
+            <div class="hero-actions">
+                <div class="button-wrapper-animate">
+                    <div>
+                        <a href="#primary-link" class="button button-primary">
+                        Work With US
+                        <img src="./arrow-right-2.svg" />
+                        </a>
+                    </div>
+
+                </div>
+              <a href="#secondary-link" class="button-secondary">
+                Secondary Action
+              </a>
+            </div>
+          </div>
+    </div>
+      </section>
 
      <section class="testimonial-section bg-green-950">
 
@@ -145,7 +177,7 @@
                  
                 
         </div>
-        
+
         
     </section>
 
@@ -162,12 +194,11 @@
     box-sizing: border-box;
 }
 
-
-
 :root {
   /* Define variables */
   /* green */
   --green-500:#006466;
+  --green-600:#005A5C;
   --green-700:#005052;
   --green-800:#004142;
   --green-950: #001E1F ;
@@ -177,6 +208,7 @@
   --purplee-100:#F6E4F6;
   --purple-300:#DD97DD; /* Used for text-purple-300 */
   --purple-400:#C752C7; /* Used for next-btn background */
+  --purple-500:#4D194D;
 
   /* grey */
   --grey-50:#F4F4F4;
@@ -190,6 +222,7 @@
   --font-size-h3:32px;
   --font-height-sm:20px;
   --font-height-2xl:40px;
+  --font-height-4xl:80px;
 
 
 }
@@ -204,6 +237,61 @@ section{
   
 }
 
+.button {
+    padding:14px 18px;
+    border-radius: 16px;
+    display: inline-flex;   
+}
+
+
+
+
+
+@keyframes background-spin {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Style for the wrapper div */
+    .button-wrapper-animate {
+      position: relative;
+      display: inline-block;
+      padding: 2px; 
+      border-radius: 16px; 
+      overflow: hidden; 
+      transition: transform 0.3s ease;
+      animation: background-spin 6s linear infinite;
+    }
+    
+    .button-wrapper-animate:hover {
+        background: linear-gradient(
+          90deg,
+          #00fff1,
+          #ff00aa,
+          #00fff1
+        );
+        transform:translateY(-0.3rem)
+    }
+
+
+
+.button-primary {
+   color:#fff;
+   background-color: var(--green-600);
+ 
+}
+
+.button-primary:focus {
+   border:1px solid var(--green-800)
+}
+
 
 @media (max-width: 767px) {
   section{
@@ -211,6 +299,107 @@ section{
   }
 }
 
+
+.hero{
+
+ overflow: hidden;
+ 
+ .background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -40%);
+  object-fit: cover;
+}
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:#000;
+      opacity: 0.6;
+    }
+
+    .hero-wrapper {
+        max-width:720px;
+        text-align: center;
+        max-height: 366px;
+  
+    }
+
+    .intro {
+      
+        display: inline-flex;       
+       padding: 0.6rem 0.8rem;
+       border-radius: 14px;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.02em;
+        font-family: "Inter Tight",sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        backdrop-filter: blur(16px);
+        margin-bottom: 1.5rem;
+-webkit-backdrop-filter: blur(16px);
+    }
+
+    h1 {
+font-size: 3rem;
+line-height: var(--font-height-4xl); 
+letter-spacing: -0.04em;
+text-align: center;
+font-weight: 400;
+position: relative;
+z-index: 3;
+    }
+     .taxes {
+        padding: 0.5rem;
+        display: inline-block;
+     }
+
+
+     .desc {
+        text-align: center;
+        margin: 2rem auto;
+        opacity: 0.8;
+        font-weight: 500;
+        line-height: 1.5;
+        width: 72%;
+        font-size: 18px;
+     }
+
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     color:white;
+      .hero-actions {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        .button-primary img{
+            margin-left: 0.5rem;
+        }
+
+        .button-primary:hover{
+            background-color: var(--purple-500);
+            border:1px
+        }
+        z-index: 3;
+        a {
+            text-decoration: none;
+        }
+      }
+   
+}
 
 .flex {
     display: flex;
@@ -251,6 +440,13 @@ section{
 
 
 /* Unused .bg-purple-300 removed */
+.bg-purple-400 {
+    background-color: var(--purple-400);
+}
+
+.bg-purple-500{
+    background-color: var(--purple-500);
+}
 
 /* Unused .text-green-500 removed */
 
